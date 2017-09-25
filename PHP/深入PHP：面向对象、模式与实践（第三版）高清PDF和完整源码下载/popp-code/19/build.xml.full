@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+
+<project name="megaquiz" default="build" basedir=".">
+    <property name="dbname"  value="megaquiz" override="true" />
+    <property name="dbpass"  value="" override="true" />
+    <property name="dbhost" value="localhost" override="true" />
+
+    <property name="src" value="./src" />
+    <property name="build" value="./build" />
+    <property name="projname" value="${phing.project.name}" />
+    <property name="installbase"    value="${env.HOME}/htdocs/${projname}"  override="true" />
+    <property name="install_lib"    value="${installbase}/lib"  override="true" />
+    <property name="install_config" value="${installbase}/config"  override="true" />
+    <property name="install_view"   value="${installbase}/view"  override="true" />
+
+    <fileset dir="${src}/lib" id="srclib">
+        <exclude name="CVS" />
+    </fileset>
+
+    <target if="dbname" name="setupconfig">
+        <copy todir="${build}/lib/config">
+            <filterchain>
+                <stripphpcomments />
+                <replacetokens>
+                    <token key="dbname" value="${dbname}" />
+                    <token key="dbhost" value="${dbhost}" />
+                    <token key="dbpass" value="${dbpass}" />
+                </replacetokens>
+            </filterchain>
+            <fileset dir="${src}/config">
+                <exclude name="CVS" />
+            </fileset>
+        </copy>
+    </target>
+
+    <target name="install" depends="build">
+        <copy todir="${install_lib}">
+            <fileset dir="${build}/lib" />
+        </copy>
+    </target>
+
+
+    <target name="build" depends="setupconfig">
+        <copy todir="${build}/lib">
+            <filterchain>
+                <stripphpcomments />
+            </filterchain>
+
+            <fileset refid="srclib"/>
+        </copy>
+    </target>
+
+    <target name="clean">
+        <echo>Cleaning out build directory</echo>
+        <delete dir="${build}" />
+    </target>
+
+    <target name="complete" depends="clean,build"/>
+
+</project>

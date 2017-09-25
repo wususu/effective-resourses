@@ -1,0 +1,5 @@
+mv /tmp/data /tmp/data.$$
+cp -r data/ /tmp/data
+php ./build-db.php 
+#php runner.php cmd=AddVenue venue_name="myvenue"
+#php runner.php cmd=AddSpace venue_id="1" space_name="my, er, space"

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package packagerversion="1.4.11" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0
+http://pear.php.net/dtd/tasks-1.0.xsd
+http://pear.php.net/dtd/package-2.0
+http://pear.php.net/dtd/package-2.0.xsd">
+ <name>Dialekt</name>
+ <channel>pear.appulsus.com</channel>
+ <summary>A package for translating text and web pages into silly tones of voice</summary>
+ <description>Be the envy of your friends with this hilarious dialect translator. Easy to extend and altogether delightful.  
+ </description>
+ <lead>
+  <name>Matt Zandstra</name>
+  <user>mattz</user>
+  <email>matt@example.com</email>
+  <active>yes</active>
+ </lead>
+ <date>2010-03-07</date>
+ <time>18:01:44</time>
+ <version>
+  <release>1.2.1</release>
+  <api>1.2.1</api>
+ </version>
+ <stability>
+  <release>stable</release>
+  <api>stable</api>
+ </stability>
+ <license uri="http://www.php.net/license">PHP License</license>
+ <notes>initial work
+ </notes>
+ <contents>
+  <dir name="/">
+   <dir name="data">
+    <file name="alig.txt" role="data" />
+    <file name="dalek.txt" role="data" />
+   </dir> <!-- /data -->
+   <dir name="Dialekt">
+    <file name="AliG.php" role="php" />
+    <file name="Dalek.php" role="php" />
+   </dir> <!-- /Dialekt -->
+   <dir name="script">
+    <file name="dialekt.bat" role="script">
+     <tasks:replace from="@php_dir@" to="php_dir" type="pear-config" />
+     <tasks:replace from="@bin_dir@" to="bin_dir" type="pear-config" />
+     <tasks:replace from="@php_bin@" to="php_bin" type="pear-config" />
+    </file>
+    <file name="dialekt.sh" role="script">
+     <tasks:replace from="@php_dir@" to="php_dir" type="pear-config" />
+     <tasks:replace from="@bin_dir@" to="bin_dir" type="pear-config" />
+     <tasks:replace from="@php_bin@" to="php_bin" type="pear-config" />
+    </file>
+   </dir> <!-- /script -->
+   <file name="cli-dialekt.php" role="php" />
+   <file name="Dialekt.php" role="php">
+    <tasks:replace from="@bin_dir@" to="bin_dir" type="pear-config" />
+    <tasks:replace from="@php_bin@" to="php_bin" type="pear-config" />
+   </file>
+  </dir> <!-- / -->
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5.1.0</min>
+   </php>
+   <pearinstaller>
+    <min>1.4.1</min>
+   </pearinstaller>
+<!--
+   <package>
+    <name>Fandango</name>
+    <channel>pear.php.net</channel>
+    <min>10.5</min>
+   </package>
+-->
+  </required>
+<!--
+  <optional>
+   <package>
+    <name>DB</name>
+    <channel>pear.php.net</channel>
+    <min>10.5</min>
+   </package>
+  </optional>
+-->
+ </dependencies>
+ <phprelease>
+  <installconditions>
+   <os>
+    <name>unix</name>
+   </os>
+  </installconditions>
+  <filelist>
+   <install as="dialekt" name="script/dialekt.sh" />
+   <install as="dalek" name="data/dalek.txt" />
+   <install as="alig" name="data/alig.txt" />
+   <ignore name="script/dialekt.bat" />
+  </filelist>
+ </phprelease>
+ <phprelease>
+  <installconditions>
+   <os>
+    <name>windows</name>
+   </os>
+  </installconditions>
+  <filelist>
+   <install as="dialekt" name="script/dialekt.bat" />
+   <install as="dalek" name="data/dalek.txt" />
+   <install as="alig" name="data/alig.txt" />
+   <ignore name="script/dialekt.sh" />
+  </filelist>
+ </phprelease>
+</package>

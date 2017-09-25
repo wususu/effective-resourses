@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!-- build xml -->
+
+<project name="megaquiz"
+         default="main"
+         basedir=".">
+
+    <target name="setenvpass" if="env.DBPASS" unless="dbpass">
+        <property name="dbpass" override="yes" value="${env.DBPASS}" />
+    </target>
+
+    <target name="setpass" unless="dbpass" depends="setenvpass">
+        <property name="dbpass" override="yes" value="default" />
+    </target>
+
+    <target name="main" depends="setpass">
+        <echo>pass:     ${dbpass}</echo>
+    </target>
+
+</project>

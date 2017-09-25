@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!-- build xml -->
+
+<project name="megaquiz"
+         default="main" >
+
+    <target name="setpass" unless="dbpass">
+        <input message="You don't seem to have set a db password"
+               propertyName="dbpass"
+               defaultValue="default"
+               promptChar=" >" />
+    </target>
+
+    <target name="main" depends="setpass">
+        <echo>pass:     ${dbpass}</echo>
+    </target>
+</project>

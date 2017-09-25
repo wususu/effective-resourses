@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package packagerversion="1.4.11" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0
+http://pear.php.net/dtd/tasks-1.0.xsd
+http://pear.php.net/dtd/package-2.0
+http://pear.php.net/dtd/package-2.0.xsd">
+ <name>userthing</name>
+ <!-- <channel>pear.appulsus.com</channel> -->
+ <channel>pear.php.net</channel>
+ <summary>A sample package that demo's aspects of CI</summary>
+ <!--<wrong /> -->
+ <description>Consisting of tests, code coverage, Subversion, etc
+ </description>
+ <lead>
+  <name>Matt Zandstra</name>
+  <user>mattz</user>
+  <email>matt@example.com</email>
+  <active>yes</active>
+ </lead>
+ <date>2010-03-07</date>
+ <time>18:01:44</time>
+ <version>
+  <release>1.2.1</release>
+  <api>1.2.1</api>
+ </version>
+ <stability>
+  <release>stable</release>
+  <api>stable</api>
+ </stability>
+ <license uri="http://www.php.net/license">PHP License</license>
+ <notes>initial work
+ </notes>
+ <contents>
+  <dir name="/">
+   <dir name="userthing">
+     <dir name="domain">
+       <file name="User.php" role="php" />
+     </dir> <!-- /domain -->
+     <dir name="util">
+       <file name="Validator.php" role="php" />
+     </dir> <!-- /domain-->
+     <dir name="persist">
+       <file name="UserStore.php" role="php" />
+     </dir> <!-- /persist -->
+   </dir> <!-- /userthing -->
+   </dir> <!-- / -->
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5.3.0</min>
+   </php>
+   <pearinstaller>
+    <min>1.4.1</min>
+   </pearinstaller>
+  </required>
+ </dependencies>
+ <phprelease>
+ <!--
+  <installconditions>
+   <os>
+    <name>unix</name>
+   </os>
+  </installconditions>
+  <filelist>
+   <install as="userthing" name="script/userthing.sh" />
+   <install as="dalek" name="data/dalek.txt" />
+   <install as="alig" name="data/alig.txt" />
+   <ignore name="script/userthing.bat" />
+  </filelist>
+ </phprelease>
+ <phprelease>
+  <installconditions>
+   <os>
+    <name>windows</name>
+   </os>
+  </installconditions>
+  <filelist>
+   <install as="userthing" name="script/userthing.bat" />
+   <install as="dalek" name="data/dalek.txt" />
+   <install as="alig" name="data/alig.txt" />
+   <ignore name="script/userthing.sh" />
+  </filelist>
+  -->
+ </phprelease>
+</package>

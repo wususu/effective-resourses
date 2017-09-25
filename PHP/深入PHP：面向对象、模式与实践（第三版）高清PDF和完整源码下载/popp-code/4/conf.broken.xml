@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<conf-broked>
+    <item name="user">bob</item>
+    <item name="pass">newpass</item>
+    <item name="host">localhost</item>
+</conf>

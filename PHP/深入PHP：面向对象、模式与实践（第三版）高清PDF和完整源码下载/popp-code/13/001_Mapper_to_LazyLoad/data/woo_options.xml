@@ -1,0 +1,33 @@
+<woo-options>
+    <dsn>sqlite://tmp/data/woo.db</dsn>
+
+<control>
+    <view>main</view>
+    <view status="CMD_OK">main</view>
+    <view status="CMD_ERROR">error</view>
+
+    <command name="ListVenues">
+        <view>listvenues</view>
+    </command>
+
+    <command name="QuickAddVenue">
+        <classalias name="AddVenue" />
+        <view>quickadd</view>
+    </command>
+
+    <command name="AddVenue">
+        <view>addvenue</view>
+        <status value="CMD_OK"> 
+          <forward>AddSpace</forward>
+          <!--<forward>AddVenue</forward> -->
+        </status>
+    </command>
+
+    <command name="AddSpace">
+        <view>addspace</view>
+        <status value="CMD_OK"> 
+            <forward>ListVenues</forward>
+        </status>
+    </command>
+</control>
+</woo-options>

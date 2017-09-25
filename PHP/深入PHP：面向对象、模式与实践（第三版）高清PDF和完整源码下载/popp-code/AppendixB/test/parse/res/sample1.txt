@@ -1,0 +1,4 @@
+this
+is a    sample
+<gi:arse attribute="ok" />
+another test

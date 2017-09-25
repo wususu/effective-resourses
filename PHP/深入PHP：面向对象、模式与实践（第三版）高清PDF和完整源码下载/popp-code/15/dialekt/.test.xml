@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE package SYSTEM "http://pear.php.net/dtd/package-1.0">
+<package version="1.0">
+  <name>Dialekt</name>
+  <summary>xxys</summary>
+  <description>xxx</description>
+  <maintainers>
+    <maintainer>
+      <user>bob</user>
+      <name>bob bob</name>
+      <email>bob@bob.com</email>
+      <role>developer</role>
+    </maintainer>
+  </maintainers>
+  <release>
+    <version>1.2.1</version>
+    <date>2004-08-12</date>
+    <license>PHP License</license>
+    <state>beta</state>
+    <notes>We've implemented many new and exciting features</notes>
+    <filelist>
+      <dir baseinstalldir="/" name="/">
+       <dir name="data">
+        <file role="data" name="alig.txt"/>
+        <file role="data" name="dalek.txt"/>
+       </dir> <!-- data -->
+       <dir name="php">
+        <file role="php" name="AliG.php"/>
+        <file role="php" name="cli-dialekt.php"/>
+        <file role="php" name="Dalek.php"/>
+        <file role="php" name="main-dialekt.php"/>
+       </dir> <!-- php -->
+       <dir name="script">
+        <file role="php" name="cli-dialekt.php"/>
+       </dir> <!-- script -->
+       <file role="data" name="package.xml"/>
+      </dir> <!-- / -->
+    </filelist>
+  </release>
+  <changelog>
+    <release>
+      <version>1.2.1</version>
+      <date>2004-08-12</date>
+      <license>PHP License</license>
+      <state>beta</state>
+      <notes>We've implemented many new and exciting features</notes>
+    </release>
+  </changelog>
+</package>

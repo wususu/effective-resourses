@@ -1,0 +1,6 @@
+copy the data/ directory to /tmp which is the expected, hard coded location (clearly not something we'd do in a real system!). The ApplicationController will look for /tmp/data/options.xml 
+
+
+STOP PRESS... 
+
+see the little quicksetupscript -- this moves data/ for you and runs a sqlite setup script, and then demos a couple of GUI commands. This will probably destroy your machine and make off with your beer, so I didn't recommend that you run it, ok?

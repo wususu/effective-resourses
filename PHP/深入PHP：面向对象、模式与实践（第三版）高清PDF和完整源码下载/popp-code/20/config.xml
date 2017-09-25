@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<cruisecontrol>
+    <property name="buildmaster.email"  value="matt@getinstance.com"/>
+    <property name="buildmaster.name"  value="bobthebuilder"/>
+
+  <project name="connectfour">
+    <listeners>
+      <currentbuildstatuslistener file="logs/${project.name}/status.txt"/>
+    </listeners>
+    <bootstrappers>
+      <antbootstrapper anthome="apache-ant-1.7.0" buildfile="projects/${project.name}/build.xml" target="clean"/>
+    </bootstrappers>
+    <modificationset quietperiod="30">
+      <!-- touch any file in connectfour project to trigger a build -->
+      <filesystem folder="projects/${project.name}"/>
+    </modificationset>
+    <schedule interval="300">
+      <ant anthome="apache-ant-1.7.0" buildfile="projects/${project.name}/build.xml"/>
+    </schedule>
+    <log>
+      <merge dir="projects/${project.name}/target/test-results"/>
+    </log>
+    <publishers>
+      <onsuccess>
+        <artifactspublisher dest="artifacts/${project.name}" file="projects/${project.name}/target/${project.name}.jar"/>
+      </onsuccess>
+    </publishers>
+  </project>
+  <project name="userthing" buildafterfailed="false">
+    <listeners>
+      <currentbuildstatuslistener file="logs/${project.name}/status.txt"/>
+    </listeners>
+    <modificationset>
+      <svn localWorkingCopy="/usr/local/cruisecontrol//projects/userthing/source"/>
+    </modificationset>
+    <bootstrappers>
+      <svnbootstrapper localWorkingCopy="/usr/local/cruisecontrol//projects/userthing/source"/>
+    </bootstrappers>
+    <schedule interval="300">
+      <ant anthome="apache-ant-1.7.0" buildfile="projects/${project.name}/build.xml"/>
+    </schedule>
+    <log dir="logs/${project.name}">
+      <merge dir="projects/${project.name}/build/logs/"/>
+    </log>
+    <publishers>
+      <artifactspublisher dir="projects/${project.name}/build/builderror" dest="artifacts/${project.name}" subdirectory="builderror"/>
+      <artifactspublisher dir="projects/${project.name}/build/api" dest="artifacts/${project.name}" subdirectory="api"/>
+      <artifactspublisher dir="projects/${project.name}/build/coverage" dest="artifacts/${project.name}" subdirectory="coverage"/>
+      <execute command="phpcb --log projects/${project.name}/build/logs --source projects/${project.name}/source/src --output projects/${project.name}/build/php-code-browser"/>
+      <artifactspublisher dir="projects/${project.name}/build/php-code-browser" dest="artifacts/${project.name}" subdirectory="php-code-browser"/>
+      <execute command="/usr/bin/phpuc graph logs/${project.name} artifacts/${project.name}"/>
+
+   <email mailhost="smtp.gmail.com" mailport="465" username="matt.zandstra@gmail.com" password="l0veb0x2" usessl="true" returnaddress="foo@example.com"
+buildresultsurl="http://localhost:8080/cruisecontrol/buildresults/${project.name}"
+returnname="phpUnderControl server">
+<always address="matt@getinstance.com" />
+<failure address="matt@fate16.com" reportWhenFixed="true" />
+</email>
+<!--  logdir="logs/${project.name}"  -->
+
+    </publishers>
+  </project>
+</cruisecontrol>

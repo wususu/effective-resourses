@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!-- build xml -->
+
+<project name="megaquiz"
+         default="main"
+         description="A quiz engine">
+    <target name="runfirst"
+            description="The first target" />
+    <target name="runsecond"
+            depends="runfirst"
+            description="The second target" />
+    <target name="main"
+            depends="runsecond"
+            description="The main target" />
+</project>

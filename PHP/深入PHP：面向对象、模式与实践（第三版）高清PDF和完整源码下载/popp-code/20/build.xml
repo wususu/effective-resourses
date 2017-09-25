@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="userthing" default="build" basedir=".">
+  <target name="build" depends="checkout,php-documentor,php-codesniffer,phpunit,install-package"/>
+  <target name="checkout">
+    <exec executable="svn" dir="${basedir}/source" failonerror="on">
+      <arg line="up"/>
+    </exec>
+  </target>
+  <target name="php-documentor">
+    <exec executable="phpdoc" dir="${basedir}/source" logerror="on">
+      <arg line="--title '${ant.project.name}' -ue on -t ${basedir}/build/api -d src -tb '/usr/share/pear/data/phpUnderControl/data/phpdoc' -o HTML:Phpuc:phpuc"/>
+    </exec>
+  </target>
+  <target name="php-codesniffer">
+    <exec executable="phpcs" dir="${basedir}/source" output="${basedir}/build/logs/checkstyle.xml" error="/tmp/checkstyle.error.log">
+      <arg line="--report=checkstyle --standard=Zend src"/>
+    </exec>
+  </target>
+  <target name="phpunit">
+    <exec executable="phpunit" dir="${basedir}/source/src" failonerror="on">
+      <arg line=" --log-junit ${basedir}/build/logs/phpunit.xml --coverage-clover ${basedir}/build/logs/phpunit.coverage.xml --coverage-html ${basedir}/build/coverage UserTests test/UserTests.php"/>
+    </exec>
+  </target>
+
+  <target name="make-package">
+    <exec executable="pear" dir="${basedir}/source/src" 
+        failonerror="on"
+        output="${basedir}/build/builderror/index.txt">
+      <arg line=" package" />
+   </exec>
+  </target>
+
+  <target name="install-package" depends="make-package">
+    <fileset id="package.ref" 
+         dir="${basedir}/source/src/" 
+         includes="userthing*.tgz" />
+    <pathconvert property="package.file" refid="package.ref" />
+
+    <exec executable="pear" dir="${basedir}/source/src" 
+        failonerror="on"
+        output="${basedir}/build/builderror/index.txt">
+      <arg value="install" />
+      <arg value="--force" />
+      <arg value="--installroot=${basedir}/build/install" />
+      <arg file="${package.file}" />
+   </exec>
+   <delete>
+    <fileset refid="package.ref" />
+   </delete>
+  </target>
+
+</project>
