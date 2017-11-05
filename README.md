@@ -5,3 +5,4 @@
 ## 在线书籍
 
 [快乐的Linux命令行](http://billie66.github.io/TLCL/index.html)
+[Essential Netty in Action 《Netty 实战(精髓)》](https://waylau.com/essential-netty-in-action/)
