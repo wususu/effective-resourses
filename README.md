@@ -24,6 +24,7 @@
 + [Spring揭秘](Java/spring揭秘.pdf)
 + [Spring源码深度解析](Java/Spring源码深度解析.pdf)
 + [看透SpringMVC源代码与实践](Java/看透springMvc源代码分析与实践.pdf) 
++ [Java Generics and Collections [Naftalin Wadler 2006]](Java/[Naftalin_Wadler_2006]_Java_Generics_and_Collections.pdf)
 
 
 ### Python
