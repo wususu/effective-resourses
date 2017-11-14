@@ -54,6 +54,10 @@
 + [TCP-IP详解](网络/TCP-IP详解_卷一、二、三.pdf)
 + [Linux高性能服务器编程](网络/Linux高性能服务器编程.pdf)
 
+### 数据库
+
++ [MySQL技术内幕 InnoDB存储引擎(第2版)](数据库/MySQL技术内幕(InnoDB存储引擎)第2版.pdf)
+
 ### 其他
 
 + [代码简洁之道](clean_code.pdf)
