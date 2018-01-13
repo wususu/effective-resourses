@@ -1,5 +1,8 @@
 # e-book_ppt_doc
 一些电子书 文档 ppt
+
+目前书籍更新比较偏向Java、Linux这方面，欢迎其他方向的同好一起更新！
+
 长期更新,欢迎Star or Fork
 
 ## 电子书
@@ -25,7 +28,7 @@
 + [Spring源码深度解析](Java/Spring源码深度解析.pdf)
 + [看透SpringMVC源代码与实践](Java/看透springMvc源代码分析与实践.pdf) 
 + [Java Generics and Collections [Naftalin Wadler 2006]](Java/[Naftalin_Wadler_2006]_Java_Generics_and_Collections.pdf)
-
++ [Netty 实战](Java/Netty In Action中文版)
 
 ### Python
 
@@ -57,6 +60,7 @@
 ### 数据库
 
 + [MySQL技术内幕 InnoDB存储引擎(第2版)](数据库/MySQL技术内幕(InnoDB存储引擎)第2版.pdf)
++ [Redis设计与实现（第二版）](数据库/redis设计与实现第二版.pdf)
 
 ### 其他
 
