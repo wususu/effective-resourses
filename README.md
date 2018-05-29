@@ -28,7 +28,13 @@
 + [Spring源码深度解析](Java/Spring源码深度解析.pdf)
 + [看透SpringMVC源代码与实践](Java/看透springMvc源代码分析与实践.pdf) 
 + [Java Generics and Collections [Naftalin Wadler 2006]](Java/[Naftalin_Wadler_2006]_Java_Generics_and_Collections.pdf)
-+ [Netty 实战](Java/Netty In Action中文版)
++ [Netty 实战](Java/Netty_In_Action中文版/)
+
+### 大数据
+
++ [Program In Scala](bigdata/Programming_in_Scala.pdf)
++ [Program In Scala(中文版)[不全]](bigdata/Scala编程(中文版).pdf)
++ [Spark快速大数据分析](bigdata/Spark快速大数据分析.pdf)
 
 ### Python
 
