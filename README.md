@@ -28,7 +28,7 @@
 ## 写在前面
 
 1. 由于个人的局限性，书籍大都跟自己学习的方向相关，目前主要内容是Java与其相关的组件，以及大数据方向的内容（PHP Python DB Linux也有一些）
-2. 书名【E】结尾的为电子书，未标注的为pdf
+2. 书名【OL】结尾的为在线书籍，未标注的为pdf
 3. 如何参与到本项目：<br>
   欢迎推荐优质书籍，可提Issue或者email联系我。有资源的可附上资源链接，没有的话我会去找一下
 
@@ -56,15 +56,15 @@
 + [看透SpringMVC源代码与实践](Java/看透springMvc源代码分析与实践.pdf) 
 + [Java Generics and Collections [Naftalin Wadler 2006]](Java/[Naftalin_Wadler_2006]_Java_Generics_and_Collections.pdf)
 + [Netty 实战](Java/Netty_In_Action中文版/)
-+ [Essential Netty in Action 《Netty 实战(精髓)》【E】](https://waylau.com/essential-netty-in-action/)
++ [Essential Netty in Action 《Netty 实战(精髓)》【OL】](https://waylau.com/essential-netty-in-action/)
 
 
 ### 大数据
 
 + [Program In Scala](bigdata/Programming_in_Scala.pdf)
 + [Program In Scala(中文版)[不全]](bigdata/Scala编程(中文版).pdf)
-+ [Scala课堂(Twitter)【E】](http://twitter.github.io/scala_school/zh_cn)
-+ [Effective-Scala【E】](http://twitter.github.io/effectivescala/index-cn.html)
++ [Scala课堂(Twitter)【OL】](http://twitter.github.io/scala_school/zh_cn)
++ [Effective-Scala【OL】](http://twitter.github.io/effectivescala/index-cn.html)
 + [Spark快速大数据分析](bigdata/Spark快速大数据分析.pdf)
 
 ### Python
@@ -101,7 +101,7 @@
 
 ### Linux
 
-+ [快乐的Linux命令行【E】](http://billie66.github.io/TLCL/index.html)
++ [快乐的Linux命令行【OL】](http://billie66.github.io/TLCL/index.html)
 
 ### 其他
 
