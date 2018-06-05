@@ -7,6 +7,12 @@
 
 ## 电子书
 
+### 一些规范：
+1. 书名【E】结尾的为电子书，未标注的为pdf
+2. 如何参与到本项目：<br>
+  欢迎推荐优质书籍，可提Issue或者email联系我。有资源的可附上资源链接，没有的话我会去找一下
+
+
 ### Java
 
 + [Java编程思想](Java/Java编程思想.pdf)
@@ -29,13 +35,15 @@
 + [看透SpringMVC源代码与实践](Java/看透springMvc源代码分析与实践.pdf) 
 + [Java Generics and Collections [Naftalin Wadler 2006]](Java/[Naftalin_Wadler_2006]_Java_Generics_and_Collections.pdf)
 + [Netty 实战](Java/Netty_In_Action中文版/)
++ [Essential Netty in Action 《Netty 实战(精髓)》【E】](https://waylau.com/essential-netty-in-action/)
+
 
 ### 大数据
 
 + [Program In Scala](bigdata/Programming_in_Scala.pdf)
 + [Program In Scala(中文版)[不全]](bigdata/Scala编程(中文版).pdf)
-+ [Scala课堂(Twitter)](http://twitter.github.io/scala_school/zh_cn)
-+ [Effective-Scala](http://twitter.github.io/effectivescala/index-cn.html)
++ [Scala课堂(Twitter)【E】](http://twitter.github.io/scala_school/zh_cn)
++ [Effective-Scala【E】](http://twitter.github.io/effectivescala/index-cn.html)
 + [Spark快速大数据分析](bigdata/Spark快速大数据分析.pdf)
 
 ### Python
@@ -70,13 +78,12 @@
 + [MySQL技术内幕 InnoDB存储引擎(第2版)](数据库/MySQL技术内幕(InnoDB存储引擎)第2版.pdf)
 + [Redis设计与实现（第二版）](数据库/redis设计与实现第二版.pdf)
 
+### Linux
+
++ [快乐的Linux命令行【E】](http://billie66.github.io/TLCL/index.html)
+
 ### 其他
 
 + [代码简洁之道](clean_code.pdf)
 + [编码的奥秘](编码的奥秘.pdf)
 
-
-## 在线书籍
-
-+ [快乐的Linux命令行](http://billie66.github.io/TLCL/index.html)
-+ [Essential Netty in Action 《Netty 实战(精髓)》](https://waylau.com/essential-netty-in-action/)
