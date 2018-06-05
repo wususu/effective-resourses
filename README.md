@@ -10,8 +10,19 @@
 - [写在前面](#写在前面)
 
 - [电子书](#电子书)
-
+    + [Java](#java)
+    + [大数据](#大数据)
+    + [Python](#python)
+    + [JavaScript](#javascript)
+    + [PHP](#php)
+    + [网络](#网络)
+    + [数据库](#数据库)
+    + [Linux](#linux)
+    + [其他](#其他)
+    
 - [优质博文](#优质博文)
+    + [Scala](#scala)
+  
 
 
 ## 写在前面
@@ -100,3 +111,6 @@
 
 ## 优质博文
 
+### Scala
+
++ [关于Scala的博文-作者hongjiang](http://hongjiang.info/scala/)
