@@ -34,6 +34,8 @@
 
 + [Program In Scala](bigdata/Programming_in_Scala.pdf)
 + [Program In Scala(中文版)[不全]](bigdata/Scala编程(中文版).pdf)
++ [Scala课堂(Twitter)](http://twitter.github.io/scala_school/zh_cn)
++ [Effective-Scala](http://twitter.github.io/effectivescala/index-cn.html)
 + [Spark快速大数据分析](bigdata/Spark快速大数据分析.pdf)
 
 ### Python
