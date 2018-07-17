@@ -111,6 +111,10 @@
 
 ## 优质博文
 
+### 学习
+
++ [工作中如何做好技术积累](https://tech.meituan.com/study_vs_work.html)
+
 ### Scala
 
 + [关于Scala的博文-作者hongjiang](http://hongjiang.info/scala/)
