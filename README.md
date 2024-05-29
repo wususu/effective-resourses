@@ -101,6 +101,9 @@
 + [Mysql必知必会（第一版）](数据库/MySQL必知必会-第1版-文字版.pdf)
 + [sql入门经典（第五版）](数据库/SQL入门经典（第5版）.pdf)
 + [sql必知必会-中文（第四版）](数据库/SQL必知必会-中文-第4版.pdf)
++ [数据库系统概论](https://github.com/tomtang110/comp9311/blob/master/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%AE%BA(%E7%AC%AC5%E7%89%88).pdf)
++ [数据库系统实现](https://gitee.com/designcolorfullife/books/blob/master/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E5%AE%9E%E7%8E%B0%EF%BC%88%E7%AC%AC%E4%BA%8C%E7%89%88%EF%BC%89.pdf)
++ [数据库实战平台](https://github.com/oceanbase/miniob)
 
 ### Linux
 
