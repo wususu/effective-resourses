@@ -110,6 +110,7 @@
 
 + [代码简洁之道](clean_code.pdf)
 + [编码的奥秘](编码的奥秘.pdf)
++ [代码大全2](https://gitee.com/designcolorfullife/books/blob/master/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E5%AE%9E%E7%8E%B0%EF%BC%88%E7%AC%AC%E4%BA%8C%E7%89%88%EF%BC%89.pdf)
 
 
 ## 优质博文
